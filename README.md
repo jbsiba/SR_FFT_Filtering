@@ -1,6 +1,6 @@
 # SR_FFT_Filtering
 Removes the artefactual periodical texture that can appear in the super-resolution image reconstruction
-FFT_Texture_Filtering Macro for FiJi
+FFT_Texture_Filtering Macro for FiJi (v1.54f)
 
 Removes the artifactual texture by setting to 0 the frequencies corresponding to the CCD size pixel in the super-resolution image.
 Parameters are :
