@@ -1,4 +1,4 @@
-// SR_FFT_Texture_Filtering Macro for FiJi
+// SR_FFT_Texture_Filtering Macro for FiJi (v1.54f)
 // Removes the artifactual periodical texture that can appear in the super-resolution image reconstruction
 // ---------------------------
 // Sets to 0 the frequencies corresponding
@@ -47,6 +47,8 @@ macro "SR_FFT Filtering [F]"{
 	GUI();
 	//print(Crop_Mode);
 	//print(SR_Zoom);
+	
+	setBatchMode(true);
 	
 	// Padding
 	Pow2_size = Padding(Crop_Mode);
@@ -119,7 +121,9 @@ macro "SR_FFT Filtering [F]"{
 	roiManager("fill");
 
 	run("Inverse FFT");
+	close(FFT_Name);
 	
+	setBatchMode(false);
 } // END Macro FFT Filtering
 
 function Padding(mode){
